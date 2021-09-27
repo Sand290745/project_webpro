@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','Neo Culture Technology')
+@section('title',$group->name)
 
 @section('content')
 <form id="form" class="form" action="" method="get">

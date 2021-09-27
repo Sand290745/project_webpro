@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('title','Artist')
+@section('title',$artist->name)
 
 @section('content')
 
-<table>
+<table class="list">
     <tr>
         <td><strong>Stage Name</strong></td>
         <td><strong>::</strong></td>
