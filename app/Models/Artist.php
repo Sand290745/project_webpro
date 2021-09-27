@@ -14,6 +14,6 @@ class Artist extends Model
     }
 
     public function units(){
-        return $this->belongsToMany(Unit::class);
+        return $this->belongsToMany(Unit::class,'units_has_artists');
     }
 }

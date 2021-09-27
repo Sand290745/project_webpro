@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\MusicController;
+use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +20,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/group/{name}',[GroupController::class,'detail'])->name('group-detail');
+

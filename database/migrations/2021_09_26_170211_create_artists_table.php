@@ -23,7 +23,6 @@ class CreateArtistsTable extends Migration
             $table->integer('height');
             $table->string('blood_type');
             $table->string('instagram');
-            $table->string('emoij');
             $table->text('ideal');
             $table->text('photo');
             $table->foreignId('group_id')->constrained();

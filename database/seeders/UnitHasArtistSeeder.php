@@ -22,8 +22,44 @@ class UnitHasArtistSeeder extends Seeder
             'updated_at' => Carbon::now(),
         ]);
         DB::table('units_has_artists')->insert([
-            'unit_id'=>2,
+            'unit_id'=>3,
             'artist_id'=>1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>1,
+            'artist_id'=>2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>3,
+            'artist_id'=>2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>1,
+            'artist_id'=>3,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>3,
+            'artist_id'=>3,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>1,
+            'artist_id'=>4,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('units_has_artists')->insert([
+            'unit_id'=>3,
+            'artist_id'=>4,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
