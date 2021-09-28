@@ -129,4 +129,13 @@ class ArtistController extends Controller
 
         return redirect()->route('artist-detail', ['id' => $artist->id]);
     }
+
+    function delete($id)
+    {
+        $artist = Artist::where('id', $id)->firstOrFail();
+        $artist->delete();
+
+        return redirect()->route('group-detail', ['id' => $artist->group->id]);
+
+    }
 } 

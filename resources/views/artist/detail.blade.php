@@ -6,6 +6,7 @@
 <nav>
     <a href="{{ route('artist-show-unit',['id' => $artist->id])}}">Show Unit</a>
     <a href="{{ route('artist-update-form',['id' => $artist->id])}}">Update</a>
+    <a href="{{ route('artist-delete',['id' => $artist->id])}}">Delete</a>
 </nav>
 
        <img src="{{$artist->photo}}" alt="">
@@ -64,7 +65,7 @@
     <tr>
         <td><strong>Instagram</strong></td>
         <td><strong>::</strong></td>
-        <td><a href="https://www.instagram.com/{{$artist->instagram}}">{{$artist->instagram}} </a>   </td>
+        <td><a href="https://www.instagram.com/{{$artist->instagram}}">{{$artist->instagram}} </a></td>
     </tr>    
     
     <tr>

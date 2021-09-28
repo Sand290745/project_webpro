@@ -32,3 +32,4 @@ Route::post('/artist/{id}/unit/add',[ArtistController::class,'addUnit'])->name('
 Route::get('/artist/{id}/unit',[ArtistController::class,'showUnit'])->name('artist-show-unit');
 
 Route::get('/artist/{artistId}/unit/{unitId}/delete',[ArtistController::class,'artistRemove'])->name('artist-unit-remove');
+Route::get('/artist/{id}/delete',[ArtistController::class,'delete'])->name('artist-delete');
