@@ -8,17 +8,17 @@
         <tr>
             <td> <label for="term">Search</label> </td>
             <td> <strong class="color">::</strong></td>
-            <td> <input type="text" name="term" id="term"> </td>
+            <td> <input class="search" type="text" name="term" id="term"> </td>
         </tr>
     </table>
 
   <div>
-    <button form="form" class="blue" type="submit">Search</button>
+    <button form="form" type="submit">Search</button>
   </div>
 
 </form>
 
-<a class="link" href="">New Member</a>
+<a class="link" href="{{ route('artist-create-form')}}">New Member</a>
 
 <table class="list">
     <tr>
@@ -33,7 +33,7 @@
     @foreach($group->artists as $number => $artist)
     <tr>
         <td>{{$number + 1}}</td>
-        <td><a href="">{{$artist->name}}</td>
+        <td><a href="{{ route('artist-detail',['id' => $artist->id ])}}">{{$artist->name}}</td>
         <td>{{$artist->group->company->name}}</td>
         @if($group->units->isNotEmpty())
         <td> 

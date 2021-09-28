@@ -20,14 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/group/{name}',[GroupController::class,'detail'])->name('group-detail');
-Route::get('/artist/{name}',[ArtistController::class,'detail'])->name('artist-detail');
+Route::get('/group/{id}',[GroupController::class,'detail'])->name('group-detail');
 
-Route::get('/artist/{name}',[ArtistController::class,'createForm'])->name('artist-create-form');
-Route::post('/artist/{name}',[ArtistController::class,'create'])->name('artist-create');
+Route::get('/artist/create',[ArtistController::class,'createForm'])->name('artist-create-form');
+Route::post('/artist/create',[ArtistController::class,'create'])->name('artist-create');
+Route::get('/artist/{id}/update',[ArtistController::class,'updateForm'])->name('artist-update-form');
+Route::post('/artist/{id}/update',[ArtistController::class,'update'])->name('artist-update');
+Route::get('/artist/{id}',[ArtistController::class,'detail'])->name('artist-detail');
+Route::get('/artist/{id}/unit/add',[ArtistController::class,'addUnitForm'])->name('artist-add-unit-form');
+Route::post('/artist/{id}/unit/add',[ArtistController::class,'addUnit'])->name('artist-add-unit');
+Route::get('/artist/{id}/unit',[ArtistController::class,'showUnit'])->name('artist-show-unit');
 
-Route::get('/artist/{name}/update',[ArtistController::class,'updateForm'])->name('artist-update-form');
-Route::post('/artist/{name}/update',[ArtistController::class,'update'])->name('artist-update');
-
-
-Route::get('/artist/{name}/delete',[ArtistController::class,'delete'])->name('artist-delete');
+Route::get('/artist/{artistId}/unit/{unitId}/delete',[ArtistController::class,'artistRemove'])->name('artist-unit-remove');

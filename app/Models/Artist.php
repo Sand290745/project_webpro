@@ -9,6 +9,8 @@ class Artist extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function group(){
         return $this->belongsTo(Group::class);
     }

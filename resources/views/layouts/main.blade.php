@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title> @yield('title') </title>
-        <link rel="stylesheet" href="{{ asset('/css/app.css')}}">
+        <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
     </head>
     <body>
         <header>
@@ -11,13 +11,13 @@
             <nav>
 
                 <a href="/home"><strong>Home</strong></a>
-                <a href="/group/exo"><strong>Exo</strong></a>
-                <a href="/group/nct"><strong>Nct</strong></a>
-                <a href="/group/treaure"><strong>Treasure</strong></a>
+                <a href="/group/1"><strong>Exo</strong></a>
+                <a href="/group/2"><strong>Nct</strong></a>
+                <a href="/group/3"><strong>Treasure</strong></a>
 
             </nav>
         </header>
-        <div>
+        <div class="content">
             @yield('content')
         </div>
         <footer>
