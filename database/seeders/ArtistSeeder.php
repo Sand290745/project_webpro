@@ -153,6 +153,7 @@ class ArtistSeeder extends Seeder
             'instagram'=>'kimjuncotton',
             'ideal'=>' is a girl with literary interests and has long straight hair.',
             'photo'=>'https://i.pinimg.com/564x/b3/e0/01/b3e00156dbf258d619273d56b4e4e56c.jpg',
+            'group_id'=>2,
            ]);
 
            
@@ -245,7 +246,7 @@ class ArtistSeeder extends Seeder
            Artist::create([
             'name'=>'Jihoon',
             'birthday'=>'2000-03-14',
-            'position'=>'Main Vocalist',
+            'position'=>'Co-Leader, Main Dancer, Lead Vocalist',
             'zodiac'=>'Pisces',
             'weight'=> 69,
             'height'=>178,
@@ -255,6 +256,9 @@ class ArtistSeeder extends Seeder
             'photo'=>'https://kprofiles.com/wp-content/uploads/2019/11/d4d0f747361d0617ae6e9b795fb3379d930652d54b30fef5b696b598fdb105ef.jpg',
             'group_id'=>3,
            ]);
+
+
+
            
 
            
