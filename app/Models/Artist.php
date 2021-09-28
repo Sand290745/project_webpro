@@ -9,6 +9,8 @@ class Artist extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['id','name','position','zodiac','weigh','heigh','blood_type','instagram','ideal','photo'];
+
     public function group(){
         return $this->belongsTo(Group::class);
     }
