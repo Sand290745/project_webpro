@@ -1,47 +1,48 @@
 @extends('layouts.main')
 
-@section('title','Taeyong')
+@section('title', $artist->name : Create)
 
 @section('content')
-
-<table>
+<form class="form" action="{{ route('artist-create') }}" method="post">
+    @csrf
+    <table>
     <tr>
         <td><strong>Stage Name</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->name}}</td>
+        <td><input type="text" name="name" id="" value="{{ old('name')}}" required></td>
     </tr>
     <tr>
         <td><strong>Birth Name</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->birthday}}</td>
+        <td><input type="number" name="birthday" value="{{ old('birthday')}}" required></td>
     </tr>
     <tr>
         <td><strong>Position</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->position}}</td>
+        <td><input type="text" name="position" id="" value="{{ old('position')}}" required></td>
     </tr>
     <tr>
         <td><strong>Zodiac Sign</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->zodiac}}</td>
+        <td><input type="text" name="zodiac" id="" value="{{ old('zodiac')}}" required></td>
     </tr>    
     
     <tr>
         <td><strong>Height</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->height}}</td>
+        <td><input type="number" name="height" value="{{ old('height')}}" required></td>
     </tr>    
     
     <tr>
         <td><strong>Weight</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->weight}}</td>
+        <td><input type="number" name="weight" value="{{ old('weight')}}" required></td>
     </tr>    
     
     <tr>
         <td><strong>Blood Type</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->blood_type}}</td>
+        <td><input type="text" name="blood_type" id="" value="{{ old('blood_type')}}" required></td>
     </tr>       
     <tr>
         <td><strong>Sub-Unit</strong></td>
@@ -60,9 +61,15 @@
     </tr>    
     
     <tr>
-        <td><strong>Taeyong’s ideal type</strong></td>
+        <td><strong>{{$artist->name}} ideal type</strong></td>
         <td><strong>::</strong></td>
-        <td>{{$artist->ideal}}</td>
+        <td><textarea name="ideal" required>{{ old('ideal')}}</textarea></td>
     </tr>
 </table>
+
+<div class="actions">
+    <button type="submit">Create</button>
+</div>
+
+</form>
 @endsection

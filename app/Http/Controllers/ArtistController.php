@@ -15,4 +15,12 @@ class ArtistController extends Controller
             'artist' => $artist
         ]);
     }
+
+    function createForm($name)
+    {
+        $artist = Artist::orderBy('name')->get();
+        return view('artist.create',[
+            'artist' => $artist,
+        ]);
+    }
 }

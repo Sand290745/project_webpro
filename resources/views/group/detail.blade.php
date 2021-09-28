@@ -18,24 +18,30 @@
 
 </form>
 
+<a class="link" href="">New Member</a>
+
 <table class="list">
     <tr>
         <th>Number</th>
         <th>Name</th>      
         <th>Company</th>
+        @if($group->units->isNotEmpty())
         <th>Sub-units</th>
+        @endif
         <th>Fandom Name</th>
     </tr>
     @foreach($group->artists as $number => $artist)
     <tr>
         <td>{{$number + 1}}</td>
-        <td><a href="{{route('artist-detail',['name' => $artist->name])}}">{{$artist->name}}</td>
+        <td><a href="">{{$artist->name}}</td>
         <td>{{$artist->group->company->name}}</td>
+        @if($group->units->isNotEmpty())
         <td> 
             @foreach($artist->units as $unit)
                 {{$unit->name}}
             @endforeach
         </td>
+        @endif
         <td> {{$artist->group->fandom}} </td>
     </tr>
     @endforeach

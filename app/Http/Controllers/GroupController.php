@@ -10,6 +10,7 @@ class GroupController extends Controller
     function detail($name)
     {
         $group = Group::with('artists')->where('name', $name)->firstOrFail();
+
        
         return view('group.detail', [
             'group' => $group
