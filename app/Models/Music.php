@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Music extends Model
 {
+    protected $fillable = ['id','name','link','group_id','unit_id'];
+
     use HasFactory;
 
     public function group(){
