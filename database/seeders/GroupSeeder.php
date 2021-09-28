@@ -30,7 +30,7 @@ class GroupSeeder extends Seeder
         ]);
 
         Group::create([
-              'name'=>'TREAURE',
+              'name'=>'TREASURE',
               'logo'=>'',
               'fandom'=>'MAKER',
               'company_id'=>2,

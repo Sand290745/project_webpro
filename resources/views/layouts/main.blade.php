@@ -9,10 +9,12 @@
         <header>
             <h1>@yield('title') </h1>
             <nav>
+
                 <a href="/home"><strong>Home</strong></a>
                 <a href="/group/exo"><strong>Exo</strong></a>
                 <a href="/group/nct"><strong>Nct</strong></a>
                 <a href="/group/treaure"><strong>Treasure</strong></a>
+
             </nav>
         </header>
         <div>
