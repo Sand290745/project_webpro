@@ -21,4 +21,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/group/{name}',[GroupController::class,'detail'])->name('group-detail');
-
+Route::get('/artist/{name}',[ArtistController::class,'detail'])->name('artist-detail');

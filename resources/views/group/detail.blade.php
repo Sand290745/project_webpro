@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','Neo Culture Technology')
+@section('title',$group->name)
 
 @section('content')
 <form id="form" class="form" action="" method="get">
@@ -29,7 +29,7 @@
     @foreach($group->artists as $number => $artist)
     <tr>
         <td>{{$number + 1}}</td>
-        <td><a href="">{{$artist->name}}</td>
+        <td><a href="{{route('artist-detail',['name' => $artist->name])}}">{{$artist->name}}</td>
         <td>{{$artist->group->company->name}}</td>
         <td> 
             @foreach($artist->units as $unit)

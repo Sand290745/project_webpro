@@ -60,15 +60,16 @@ class ArtistSeeder extends Seeder
             'name'=>'Yuta',
             'birthday'=>'1995-10-26',
             'position'=>'Dancer, Vocalist, Rapper',
-            'zodiac'=>'Aquarius',
-            'weight'=>70  ,
-            'height'=>185,
-            'blood_type'=>'B',
-            'instagram'=>'johnnyjsuh',
-            'ideal'=>'Someone who smiles at him a lot; a girl like Yoona (SNSD)',
-            'photo'=>'https://pbs.twimg.com/media/EnmGVUGVgAAJnFG?format=jpg&name=4096x4096',
+            'zodiac'=>'Scorpio',
+            'weight'=>60,
+            'height'=>176,
+            'blood_type'=>'A',
+            'instagram'=>'yuu_taa_1026',
+            'ideal'=>'A girl who has short hair, 15 cm shorter than him, has empathy towards people and does not “act pretty”',
+            'photo'=>'https://pbs.twimg.com/media/EnmLf7EW8AE3i0k?format=jpg&name=4096x4096',
             'group_id'=>2,
            ]);
+
 
            Artist::create([
             'name'=>'Kun',
@@ -152,8 +153,9 @@ class ArtistSeeder extends Seeder
             'instagram'=>'kimjuncotton',
             'ideal'=>' is a girl with literary interests and has long straight hair.',
             'photo'=>'https://i.pinimg.com/564x/b3/e0/01/b3e00156dbf258d619273d56b4e4e56c.jpg',
-            'group_id'=>1,
            ]);
+
+           
 
            Artist::create([
             'name'=>' Baekhyun ',
@@ -226,9 +228,35 @@ class ArtistSeeder extends Seeder
            ]);
 
 
+           Artist::create([
+            'name'=>'Choi Hyunsuk',
+            'birthday'=>'1999-04-21',
+            'position'=>'Co-Leader, Main Rapper, Main Dancer',
+            'zodiac'=>'Taurus',
+            'weight'=> 58,
+            'height'=>171,
+            'blood_type'=>'A',
+            'instagram'=>'yg_treasure_official',
+            'ideal'=>'A girl with literary interests and has long straight hair',
+            'photo'=>'https://kprofiles.com/wp-content/uploads/2019/11/ac1b813edd652daaac2b674ea67029d07e2b0cf3375378874a01eba9a6db6f2a.jpg',
+            'group_id'=>3,
+           ]);
 
+           Artist::create([
+            'name'=>'Jihoon',
+            'birthday'=>'2000-03-14',
+            'position'=>'Main Vocalist',
+            'zodiac'=>'Pisces',
+            'weight'=> 69,
+            'height'=>178,
+            'blood_type'=>'B',
+            'instagram'=>'baekhyunee_exo',
+            'ideal'=>'yg_treasure_official',
+            'photo'=>'https://kprofiles.com/wp-content/uploads/2019/11/d4d0f747361d0617ae6e9b795fb3379d930652d54b30fef5b696b598fdb105ef.jpg',
+            'group_id'=>3,
+           ]);
            
 
-
+           
     }
 }
