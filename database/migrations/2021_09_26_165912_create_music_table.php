@@ -18,7 +18,7 @@ class CreateMusicTable extends Migration
             $table->string('name');
             $table->text('link');
             $table->foreignId('group_id')->constrained();
-            $table->foreignId('unit_id')->constrained();
+            $table->foreignId('unit_id')->constrained()->nullable();
             $table->timestamps();
         });
     }

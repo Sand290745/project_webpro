@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main-admin')
 
 @section('title',"{$artist->name} - {$artist->group->name}" )
 
@@ -50,28 +50,27 @@
         <td><strong>::</strong></td>
         <td>{{$artist->blood_type}}</td>
     </tr>       
+    @if($artist->units->isNotEmpty())
     <tr>
         <td><strong>Sub-Unit</strong></td>
         <td><strong>::</strong></td>
         <td> 
             {{$artist->units->pluck('name')}}
-
-            <!-- @foreach($artist->units as $unit)
-                {{$unit->name}}
-            @endforeach -->
         </td>
     </tr>    
+    @endif
     
     <tr>
         <td><strong>Instagram</strong></td>
         <td><strong>::</strong></td>
         <td><a href="https://www.instagram.com/{{$artist->instagram}}">{{$artist->instagram}} </a></td>
     </tr>    
-    
+    @if(!empty($artist->ideal))
     <tr>
-        <td><strong>Taeyong’s ideal type</strong></td>
+        <td><strong>Ideal type</strong></td>
         <td><strong>::</strong></td>
         <td>{{$artist->ideal}}</td>
     </tr>
+    @endif
 </table>
 @endsection

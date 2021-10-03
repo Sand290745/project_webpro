@@ -3,6 +3,10 @@ html {
     text-align: center;
 }
 
+table.list {
+    margin: 0 auto;
+}
+
 table.list,
 table.list tr,
 table.list td,
@@ -16,11 +20,11 @@ th {
     color: cornsilk;
 }
 
-nav {
+/* nav {
     text-align: center;
     font-weight: bold;
     margin: 16px 0;
-}
+} */
 
 footer {
     margin-top: 100px;
@@ -38,4 +42,75 @@ input {
 
 .search {
     width: 100%;
+} 
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-main {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    padding-top:16px;
+}
+
+.nav-item {
+    color:white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.channel-logo {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.channel-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    max-width:1100px;
+    margin: 0 auto;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.artist-photo {
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+}
+
+.unit-photo {
+    width: 700;
+    height: 300px;
+}
+
+table.company-list,
+table.company-list tr,
+table.company-list td,
+table.company-list th {
+    border: 1px solid gray;
+    border-collapse: collapse;
 }

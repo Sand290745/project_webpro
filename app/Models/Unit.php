@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Unit extends Model
 {
-    protected $fillable = ['id','name','logo','group_id'];
+    protected $fillable = ['id','name','photo','logo','group_id'];
 
     use HasFactory;
 

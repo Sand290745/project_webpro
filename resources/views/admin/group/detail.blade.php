@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main-admin')
 
 @section('title',$group->name)
 
@@ -18,7 +18,9 @@
 
 </form>
 
-<a class="link" href="{{ route('artist-create-form')}}">New Member</a>
+<a class="link" href="{{ route('artist-create-form')}}">New Artist</a>
+<a class="link" href="{{ route('group-create-form')}}">Music Video</a>
+<a href="{{ route('group-delete',['id' => $group->id])}}">Delete</a>
 
 <table class="list">
     <tr>

@@ -9,11 +9,9 @@ class Company extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','name'];
+    protected $fillable = ['id','logo','name'];
 
     public function groups(){
         return $this->hasMany(Group::class);
     }
-
-        
 }

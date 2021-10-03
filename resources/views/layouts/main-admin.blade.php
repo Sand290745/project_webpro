@@ -11,13 +11,17 @@
     <nav class="nav-main">
         <a class="nav-item" href="/home"><strong>Home</strong></a>
 
-        @foreach(App\Models\Group::all() as $group)
-        <a class="nav-item" href="/group/{{$group->id}}"><strong>{{$group->name}}</strong></a>
-        @endforeach
+        <a class="nav-item" href="{{route('group-list')}}"><strong>Group</strong></a>
+        <a class="nav-item" href="{{route('artist-list')}}"><strong>Artist</strong></a>
+        <a class="nav-item" href="{{route('company-list')}}"><strong>Company</strong></a>
+        <a class="nav-item" href="{{route('unit-list')}}"><strong>Unit</strong></a>
+        <a class="nav-item" href="{{route('music-list')}}"><strong>Music</strong></a>
     </nav>
 
     <main>
-        <h1 class="title"> @yield('title')</h1>
+        <h1 class="title">
+            @yield('title')
+        </h1>
 
 
 
@@ -41,9 +45,7 @@
         @enderror
     </div>
     <h1>@yield('title') </h1>-->
-    <footer>
-        Welcome to website k-pop!
-    </footer> 
+     
 </body>
 
 </html>
