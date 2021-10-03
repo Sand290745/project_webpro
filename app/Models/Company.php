@@ -9,7 +9,7 @@ class Company extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','logo','name'];
+    protected $fillable = ['id','logo','name','other_name','founded','founder','location','description'];
 
     public function groups(){
         return $this->hasMany(Group::class);

@@ -17,7 +17,7 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('logo');
-            $table->string('other_name');
+            $table->string('other_name')->nullable();
             $table->string('founded');
             $table->string('founder');
             $table->string('location');

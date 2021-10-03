@@ -73,6 +73,9 @@ Route::get('/admin/unit/{id}/delete', [AdminUnitController::class, 'delete'])->n
 Route::get('/admin/company', [AdminCompanyController::class, 'list'])->name('company-list');
 Route::get('/admin/company/create', [AdminCompanyController::class, 'createForm'])->name('company-create-form');
 Route::post('/admin/company/create', [AdminCompanyController::class, 'create'])->name('company-create');
+Route::get('/admin/company/{id}/update', [AdminCompanyController::class, 'updateForm'])->name('company-update-form');
+Route::post('/admin/company/{id}/update', [AdminCompanyController::class, 'update'])->name('company-update');
+Route::get('/admin/company/{id}/delete', [AdminCompanyController::class, 'delete'])->name('company-delete');
 Route::get('/admin/company/{id}', [AdminCompanyController::class, 'detail'])->name('company-detail');
 
 

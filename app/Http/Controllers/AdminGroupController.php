@@ -56,7 +56,7 @@ class AdminGroupController extends Controller
             $group = Group::where('id', $id)->firstOrFail();
             $group->delete();
 
-            return redirect()->route('home');
+            return redirect()->route('group-list');
         } catch (QueryException $excp) {
             return redirect()->back()->withErrors([
                 'error' => $excp->errorInfo[2],

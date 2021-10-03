@@ -41,4 +41,29 @@ class AdminCompanyController extends Controller
             return redirect()->route('company-list');
     }
 
+    function updateForm($id)
+    {
+        $company = Company::query()->where('id', $id)->firstOrFail();
+
+        return view('admin.company.update-form', [
+            'company' => $company,
+        ]);
+    }
+
+    function update(Request $request, $id)
+    {
+        $company = Company::query()->where('id', $id)->firstOrFail();
+        $data = $request->except('_token');
+        $company->update($data);
+            return redirect()->route('company-detail', ['id' => $company->id]);
+    }
+
+    function delete($id)
+    {
+            $company = Company::query()->where('id', $id)->firstOrFail();
+            $company->delete();
+
+            return redirect()->route('company-list');
+    }
+
 }
