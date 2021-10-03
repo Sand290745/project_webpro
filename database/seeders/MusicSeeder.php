@@ -71,8 +71,8 @@ class MusicSeeder extends Seeder
         ]);
 
         Music::create([
-            'name'=>'NCT DREAM - Hot Sauce',
-            'link'=>'PkKnp4SdE-w',
+            'name'=>'NCT DREAM - Hello Future',
+            'link'=>'QPUjV7epJqE',
             'group_id'=>2,
             'unit_id'=>2,
         ]);

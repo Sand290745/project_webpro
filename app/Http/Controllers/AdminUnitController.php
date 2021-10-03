@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class AdminUnitController extends Controller
 {
+    function __construct() {
+        $this->middleware('auth');
+    }
+    
     function list()
     {
         $unit = Unit::query();

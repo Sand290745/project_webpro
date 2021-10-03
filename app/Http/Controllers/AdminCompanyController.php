@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class AdminCompanyController extends Controller
 {
+    function __construct() {
+        $this->middleware('auth');
+    }
+    
     function list()
     {
         $companies = Company::query();

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             MusicSeeder::class,
             BlogSeeder::class,
             UnitHasArtistSeeder::class,
+            TrixSeeder::class,
         ]);
     
     }

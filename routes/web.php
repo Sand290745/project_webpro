@@ -6,11 +6,13 @@ use App\Http\Controllers\AdminCompanyController;
 use App\Http\Controllers\AdminGroupController;
 use App\Http\Controllers\AdminMusicController;
 use App\Http\Controllers\AdminUnitController;
-
+use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\User\BlogController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\GroupController;
 use App\Http\Controllers\User\ArtistController;
 use App\Http\Controllers\User\UnitController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,6 +80,25 @@ Route::post('/admin/company/{id}/update', [AdminCompanyController::class, 'updat
 Route::get('/admin/company/{id}/delete', [AdminCompanyController::class, 'delete'])->name('company-delete');
 Route::get('/admin/company/{id}', [AdminCompanyController::class, 'detail'])->name('company-detail');
 
+/* ************** AdminBlog ************** */
+Route::get('/admin/blog', [AdminBlogController::class, 'list'])->name('blog-list');
+Route::get('/admin/blog/create', [AdminBlogController::class, 'createForm'])->name('blog-create-form');
+Route::post('/admin/blog/create', [AdminBlogController::class, 'create'])->name('blog-create');
+Route::get('/admin/blog/{id}/update', [AdminBlogController::class, 'updateForm'])->name('blog-update-form');
+Route::post('/admin/blog/{id}/update', [AdminBlogController::class, 'update'])->name('blog-update');
+Route::get('/admin/blog/{id}', [AdminBlogController::class, 'detail'])->name('blog-detail');
+Route::get('/admin/blog/{id}/delete', [AdminBlogController::class, 'delete'])->name('blog-delete');
+
+/* *********** AdminUser *********** */
+
+Route::get('/admin/user',[AdminUserController::class, 'list'])->name('user-list');
+Route::get('/admin/user/create',[AdminUserController::class,'createForm'])->name('user-create-form');
+Route::post('/admin/user/create',[AdminUserController::class,'create'])->name('user-create');
+Route::get('/admin/user/{email}/update',[AdminUserController::class,'updateForm'])->name('user-update-form');
+Route::post('/admin/user/{email}/update',[AdminUserController::class,'update'])->name('user-update');
+Route::get('/admin/user/{email}/delete',[AdminUserController::class,'delete'])->name('user-delete');
+Route::get('/admin/user/{email}',[AdminUserController::class,'detail'])->name('user-detail');
+
 
 /* ************** Home ************** */
 Route::get('/home', [HomeController::class, 'home'])->name('home');
@@ -85,3 +106,13 @@ Route::get('/', [HomeController::class, 'home']);
 
 /* ************** Unit ************** */
 Route::get('/unit/{id}', [UnitController::class, 'detail'])->name('user-unit-detail');
+
+/* ************** Blog ************** */
+Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('user-blog-detail');
+
+
+/* *********** Login *********** */
+Route::get('/auth/login', [LoginController::class, 'loginForm'])->name('login');
+Route::post('/auth/login', [LoginController::class, 'authenticate'])->name('authenticate');
+Route::get('/auth/logout', [LoginController::class, 'logout'])->name('logout');
+

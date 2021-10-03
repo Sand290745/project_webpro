@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title> @yield('title') </title>
     <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
+    @trixassets
 </head>
 
 <body>
@@ -16,6 +17,10 @@
         <a class="nav-item" href="{{route('company-list')}}"><strong>Company</strong></a>
         <a class="nav-item" href="{{route('unit-list')}}"><strong>Unit</strong></a>
         <a class="nav-item" href="{{route('music-list')}}"><strong>Music</strong></a>
+        <a class="nav-item" href="{{route('blog-list')}}"><strong>Blog</strong></a>
+        <a class="nav-item" href="{{route('user-list')}}"><strong>User</strong></a>
+        <a class="nav-item" href="{{route('logout')}}"><strong>Logout</strong></a>
+
     </nav>
 
     <main>

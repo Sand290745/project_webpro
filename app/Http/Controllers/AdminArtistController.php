@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 
 class AdminArtistController extends Controller
 {
+    function __construct() {
+        $this->middleware('auth');
+    }
+
     const POSITIONS = [
         'leader',
         'vocal',

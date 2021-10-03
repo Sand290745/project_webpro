@@ -6,7 +6,7 @@
 
 <div class="logo-grid">
     @foreach(App\Models\Group::all() as $group)
-    <div>
+    <div class="blog-item">
         <a class="channel-name" href="{{route('user-group-detail',['id' => $group->id])}}">
             <img class="channel-logo" src="{{$group->logo}}" alt="">
             <p>{{$group->name}}</p>
@@ -15,19 +15,17 @@
     @endforeach
 </div>
 
-<form id="form" class="form" action="" method="get">
-    <table>
-        <tr>
-            <td> <label for="term">Search</label> </td>
-            <td> <strong class="color">::</strong></td>
-            <td> <input type="text" name="term" id="term"> </td>
-        </tr>
-    </table>
-
-    <div>
-        <button form="form" class="blue" type="submit">Search</button>
+<h2 class="blog-home">Album</h2>
+<div class="blog-grid">
+    @foreach(App\Models\Blog::all() as $blog)
+    <div class="blog-item">
+        <a class="channel-name" href="{{route('user-blog-detail',['id' => $blog->id])}}">
+            <img class="channel-logo" src="{{$blog->photo}}" alt="">
+            <p>{{$blog->title}}</p>
+            <p class="name">{{$blog->group->name}}</p>
+        </a>
     </div>
-
-</form>
+    @endforeach
+</div>
 
 @endsection

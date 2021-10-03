@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class AdminMusicController extends Controller
 {
+    function __construct() {
+        $this->middleware('auth');
+    }
+    
     function detail($id)
     {
         $music = Music::with('unit')->where('id', $id)->firstOrFail();

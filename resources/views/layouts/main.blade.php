@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title> @yield('title') </title>
     <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
+    @trixassets
 </head>
 
 <body>

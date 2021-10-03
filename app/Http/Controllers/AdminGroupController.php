@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class AdminGroupController extends Controller
 {
+
+    function __construct() {
+        $this->middleware('auth');
+    }
+
     function list()
     {
         $groups = Group::query();
