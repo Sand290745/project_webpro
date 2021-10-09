@@ -17,7 +17,7 @@ class UnitSeeder extends Seeder
         Unit::create([
             'name'=>'NCT127',
             'photo' => 'https://thestandard.co/wp-content/uploads/2021/09/NCT127_COVER-.jpg',
-            'logo'=>'https://yt3.ggpht.com/kmRUAKKBmCmQBj3pIHrr4e7NqAPM0Jyzw_RaqWak4CaKUh7u5PG6958lRL0_vmUI4l32-eVt6w=s900-c-k-c0x00ffffff-no-rj',
+            'logo'=>'https://i.pinimg.com/736x/21/7f/82/217f82b10cee88eb792efd636b2ade1a.jpg',
             'group_id'=>2,
         ]);
 
