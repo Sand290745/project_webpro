@@ -19,7 +19,7 @@
     <tr>
         <td><strong>Password</strong></td>
         <td>::</td>
-        <td><input type="password" name="password" ></td>
+        <td><input type="password" name="password" value="{{ old('password', $user->password)}}"></td>
     </tr>
 </table>
 

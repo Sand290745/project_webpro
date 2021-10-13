@@ -32,6 +32,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/group/create', [AdminGroupController::class, 'createForm'])->name('group-create-form');
 Route::post('/admin/group/create', [AdminGroupController::class, 'create'])->name('group-create');
 Route::get('/admin/group', [AdminGroupController::class, 'list'])->name('group-list');
+Route::get('/admin/group/{id}/update', [AdminGroupController::class, 'updateForm'])->name('group-update-form');
+Route::post('/admin/group/{id}/update', [AdminGroupController::class, 'update'])->name('group-update');
 Route::get('/admin/group/{id}', [AdminGroupController::class, 'detail'])->name('group-detail');
 Route::get('/admin/group/{id}/delete', [AdminGroupController::class, 'delete'])->name('group-delete');
 
@@ -58,8 +60,9 @@ Route::get('/admin/music/create', [AdminMusicController::class, 'createForm'])->
 Route::post('/admin/music/create', [AdminMusicController::class, 'create'])->name('music-create');
 Route::get('/admin/music/{id}/update', [AdminMusicController::class, 'updateForm'])->name('music-update-form');
 Route::post('/admin/music/{id}/update', [AdminMusicController::class, 'update'])->name('music-update');
-Route::get('/admin/music/{id}/delete', [AdminMusicController::class, 'delete'])->name('music-delete');
 Route::get('/admin/music/{id}', [AdminMusicController::class, 'detail'])->name('music-detail');
+Route::get('/admin/music/{id}/delete', [AdminMusicController::class, 'delete'])->name('music-delete');
+
 
 /* ************** AdminUnit ************** */
 Route::get('/admin/unit', [AdminUnitController::class, 'list'])->name('unit-list');
@@ -96,8 +99,8 @@ Route::get('/admin/user/create',[AdminUserController::class,'createForm'])->name
 Route::post('/admin/user/create',[AdminUserController::class,'create'])->name('user-create');
 Route::get('/admin/user/{email}/update',[AdminUserController::class,'updateForm'])->name('user-update-form');
 Route::post('/admin/user/{email}/update',[AdminUserController::class,'update'])->name('user-update');
-Route::get('/admin/user/{email}/delete',[AdminUserController::class,'delete'])->name('user-delete');
 Route::get('/admin/user/{email}',[AdminUserController::class,'detail'])->name('user-detail');
+Route::get('/admin/user/{email}/delete',[AdminUserController::class,'delete'])->name('user-delete');
 
 
 /* ************** Home ************** */
@@ -106,6 +109,11 @@ Route::get('/', [HomeController::class, 'home']);
 
 /* ************** Unit ************** */
 Route::get('/unit/{id}', [UnitController::class, 'detail'])->name('user-unit-detail');
+
+
+/* ************** Artist ************** */
+Route::get('/artist/{id}', [ArtistController::class, 'detail'])->name('user-artist-detail');
+
 
 /* ************** Blog ************** */
 Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('user-blog-detail');

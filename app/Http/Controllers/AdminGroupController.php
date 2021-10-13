@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\Models\Company;
 use Illuminate\Database\QueryException;
-
+use App\Models\Company;
 use App\Models\Group;
 use Illuminate\Http\Request;
 
@@ -47,8 +44,35 @@ class AdminGroupController extends Controller
         try {
             $data = $request->except('_token');
             $group = Group::create($data);
-            return redirect()->route('group-detail', ['id' => $group->id]);
+            return redirect()->route('group-list', ['id' => $group->id])
+            ->with('status', "Group {$group->name} was created.");
         } catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
+    }
+
+    function updateForm($id)
+    {
+        $group = Group::query()->where('id', $id)->firstOrFail();
+        $companies = Company::query()->get();
+
+        return view('admin.group.update-form', [
+            'group' => $group,
+            'companies' => $companies,
+        ]);
+    }
+
+    function update(Request $request, $id)
+    {
+        try {
+        $group = Group::query()->where('id', $id)->firstOrFail();
+        $data = $request->except('_token');
+        $group->update($data);
+            return redirect()->route('group-list', ['id' => $group->id])
+            ->with('status', " {$group->name} was updated.");
+        }catch (QueryException $excp) {
             return redirect()->back()->withInput()->withErrors([
                 'error' => $excp->errorInfo[2],
             ]);
@@ -61,7 +85,8 @@ class AdminGroupController extends Controller
             $group = Group::where('id', $id)->firstOrFail();
             $group->delete();
 
-            return redirect()->route('group-list');
+            return redirect()->route('group-list')
+            ->with('status', "Group {$group->name} was deleted.");
         } catch (QueryException $excp) {
             return redirect()->back()->withErrors([
                 'error' => $excp->errorInfo[2],

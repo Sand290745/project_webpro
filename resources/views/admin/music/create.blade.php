@@ -3,7 +3,7 @@
 @section('title', 'Music : Create')
 
 @section('content')
-<form class="form" action="{{ route('music-create') }}" method="post">
+<form class="form" action="{{ route('music-create', ['id' => $music->id])}}" method="post">
     @csrf
 
     <table>

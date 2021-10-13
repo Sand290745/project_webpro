@@ -4,6 +4,10 @@
 
 @section('content')
 
+<nav>
+<a class="link" href="{{ route('unit-update-form',['id' => $unit->id])}}">Update</a>
+<a class="link" href="{{ route('unit-delete',['id' => $unit->id])}}">Delete</a>
+</nav>
 <img class="unit-photo" src="{{$unit->photo}}" alt="">
 
 <table class="list">

@@ -12,6 +12,11 @@
             <td><input type="text" name="name" id="" value="{{ old('name', $artist->name)}}" required></td>
         </tr>
         <tr>
+            <td><strong>Nationality</strong></td>
+            <td><strong>::</strong></td>
+            <td><input type="text" name="nationality" id="" value="{{ old('nationality', $artist->nationality)}}" required></td>
+        </tr>
+        <tr>
             <td><strong>Birth Name</strong></td>
             <td><strong>::</strong></td>
             <td><input type="date" name="birthday" value="{{ old('birthday', $artist->birthday)}}" required></td>

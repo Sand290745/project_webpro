@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Database\QueryException;
 use App\Models\Blog;
 use App\Models\Group;
 use Illuminate\Http\Request;
@@ -44,11 +44,16 @@ class AdminBlogController extends Controller
 
     function create(Request $request)
     {
-        $data = $request->except('_token');
-
-        $blog = Blog::create($data);
-
-        return redirect()->route('blog-list');
+        try {
+            $data = $request->except('_token');
+            $blog = Blog::create($data);
+            
+            return redirect()->route('blog-list')->with('status', "Blog {$blog->title} was created.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 
     function updateForm($id)
@@ -63,18 +68,32 @@ class AdminBlogController extends Controller
     }
 
     function update(Request $request, $id)
-    {
-        $blog = Blog::query()->where('id', $id)->firstOrFail();
-        $data = $request->except('_token');
-        $blog->update($data);
-        return redirect()->route('blog-detail', ['id' => $blog->id]);
+    { 
+        try {
+            $blog = Blog::query()->where('id', $id)->firstOrFail();
+            $data = $request->except('_token');
+            $blog->update($data);
+            
+            return redirect()->route('blog-list', ['id' => $blog->id])
+            ->with('status', "Blog {$blog->title} was updated.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 
     function delete($id)
     {
-        $blog = Blog::query()->where('id', $id)->firstOrFail();
+        try {
+            $blog = Blog::query()->where('id', $id)->firstOrFail();
         $blog->delete();
 
-        return redirect()->route('blog-list');
+        return redirect()->route('blog-list')->with('status', "Blog {$blog->title} was deleted.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 }

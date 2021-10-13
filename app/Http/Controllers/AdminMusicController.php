@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\QueryException;
 use App\Models\Group;
 use App\Models\Music;
 use App\Models\Unit;
@@ -46,9 +47,16 @@ class AdminMusicController extends Controller
 
     function create(Request $request)
     {
-        $data = $request->except('_token');
-        $music = Music::create($data);
-            return redirect()->route('music-list');
+        try {
+            $data = $request->except('_token');
+            $music = Music::create($data);
+            return redirect()->route('music-list')
+            ->with('status', " {$music->name} was created.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
     
     function updateForm($id)
@@ -66,17 +74,31 @@ class AdminMusicController extends Controller
 
     function update(Request $request, $id)
     {
+        try {
         $music = Music::query()->where('id', $id)->firstOrFail();
         $data = $request->except('_token');
         $music->update($data);
-            return redirect()->route('music-list');
+            return redirect()->route('music-list', ['id' => $music->id])
+            ->with('status', " {$music->name} was updated.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 
     function delete($id)
     {
-            $music = Music::query()->where('id', $id)->firstOrFail();
+        try {
+             $music = Music::query()->where('id', $id)->firstOrFail();
             $music->delete();
 
-            return redirect()->route('music-list', ['id' => $music->id]);
+            return redirect()->route('music-list', ['id' => $music->id])
+            ->with('status', " {$music->name} was deleted.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 }

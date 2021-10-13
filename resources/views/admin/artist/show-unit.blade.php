@@ -4,6 +4,8 @@
 
 @section('content')
 
+<a href="{{ route('artist-detail',['id' => $artist->id])}}"><strong> &lt; Back</strong></a>
+
 <nav>
     <a class="link" href="{{ route('artist-add-unit-form',['id' => $artist->id]) }}">Add Units </a> 
 </nav>
@@ -11,6 +13,7 @@
 <table class="list">
     <tr>
         <th>Unit</th>
+        <th></th>
     </tr>
     @foreach($units as $unit)
     <tr>

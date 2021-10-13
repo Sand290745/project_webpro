@@ -4,6 +4,7 @@
 
 @section('content')
 
+<a href="{{ route('artist-show-unit',['id' => $artist->id])}}"><strong> &lt; Back</strong></a>
 
 <form action="{{ route('artist-add-unit', ['id' => $artist->id])}}" method="post">
     @csrf

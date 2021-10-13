@@ -12,6 +12,11 @@
             <td><input type="text" name="name" id="" value="{{ old('name')}}" required></td>
         </tr>
         <tr>
+            <td><strong>Nationality</strong></td>
+            <td><strong>::</strong></td>
+            <td><input type="text" name="nationality" id="" value="{{ old('nationality')}}" required></td>
+        </tr>
+        <tr>
             <td><strong>Birth Name</strong></td>
             <td><strong>::</strong></td>
             <td><input type="date" name="birthday" value="{{ old('birthday')}}"></td>

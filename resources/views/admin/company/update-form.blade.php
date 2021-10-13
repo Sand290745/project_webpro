@@ -7,6 +7,11 @@
     @csrf
     <table>
         <tr>
+            <td><strong>logo</strong></td>
+            <td><strong>::</strong></td>
+            <td><input type="text" name="logo" id="" value="{{ old('logo', $company->logo)}}" required></td>
+        </tr>
+        <tr>
             <td><strong>Name</strong></td>
             <td><strong>::</strong></td>
             <td><input type="text" name="name" id="" value="{{ old('name', $company->name)}}" required></td>
@@ -14,7 +19,7 @@
         <tr>
             <td><strong>Other name</strong></td>
             <td><strong>::</strong></td>
-            <td><input type="text" name="other_name" value="{{ old('other_name', $company->other_name)}}" required></td>
+            <td><input type="text" name="other_name" value="{{ old('other_name', $company->other_name)}}"></td>
         </tr>
         <tr>
             <td><strong>Founded</strong></td>

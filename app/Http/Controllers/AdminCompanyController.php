@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Database\QueryException;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
@@ -40,9 +40,15 @@ class AdminCompanyController extends Controller
 
     function create(Request $request)
     {
+        try {
         $data = $request->except('_token');
         $companies = Company::create($data);
-            return redirect()->route('company-list');
+            return redirect()->route('company-list')->with('status', "{$companies->name} was created."); 
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 
     function updateForm($id)
@@ -56,18 +62,32 @@ class AdminCompanyController extends Controller
 
     function update(Request $request, $id)
     {
-        $company = Company::query()->where('id', $id)->firstOrFail();
+        try {
+            $company = Company::query()->where('id', $id)->firstOrFail();
         $data = $request->except('_token');
         $company->update($data);
-            return redirect()->route('company-detail', ['id' => $company->id]);
+            return redirect()->route('company-list', ['id' => $company->id])
+            ->with('status', "{$company->name} was updated.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withInput()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }
     }
 
     function delete($id)
     {
+        try {
             $company = Company::query()->where('id', $id)->firstOrFail();
             $company->delete();
 
-            return redirect()->route('company-list');
+            return redirect()->route('company-list')
+            ->with('status', "{$company->name} was deleted.");
+        }catch (QueryException $excp) {
+            return redirect()->back()->withErrors([
+                'error' => $excp->errorInfo[2],
+            ]);
+        }     
     }
 
 }

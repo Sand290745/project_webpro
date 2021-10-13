@@ -19,7 +19,7 @@
 </form>
 
 <a class="link" href="{{ route('artist-create-form')}}">New Artist</a>
-<a class="link" href="{{ route('group-create-form')}}">Music Video</a>
+<a href="{{ route('group-update-form',['id' => $group->id])}}">Update</a>
 <a href="{{ route('group-delete',['id' => $group->id])}}">Delete</a>
 
 <table class="list">

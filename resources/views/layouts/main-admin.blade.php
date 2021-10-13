@@ -28,18 +28,6 @@
             @yield('title')
         </h1>
 
-
-
-        @yield('content')
-
-    </main>
-    <!-- <header>
-        <nav>
-            @foreach(App\Models\Group::all() as $group)
-            <a href="/group/{{$group->id}}"><strong>{{$group->name}}</strong></a>
-            @endforeach
-        </nav>
-    </header>
     <div>
         @if(session()->has('status'))
         <div class="status">{{session()->get('status')}}</div>
@@ -49,8 +37,11 @@
         <div class="status">{{ $message }}</div>
         @enderror
     </div>
-    <h1>@yield('title') </h1>-->
-     
+
+        @yield('content')
+
+    </main>
+    
 </body>
 
 </html>

@@ -15,9 +15,14 @@ class AdminArtistController extends Controller
     }
 
     const POSITIONS = [
-        'leader',
-        'vocal',
-        'dance'
+        'Leader',
+        'Rapper',
+        'Vocalist',
+        'Dancer',
+        'Center',
+        'Visual',
+        'Leader',
+        'Maknae'
     ];
 
     const ZODIACS = [
@@ -114,7 +119,8 @@ class AdminArtistController extends Controller
 
             $artist->units()->attach($unit->id);
 
-            return redirect()->route('artist-show-unit', ['id' => $artist->id]);
+            return redirect()->route('artist-show-unit', ['id' => $artist->id])
+            ->with('status',"Artist {$artist->name} was added to unit {$unit->name}.");
         } catch (QueryException $excp) {
             return redirect()->back()->withInput()->withErrors([
                 'error' => $excp->errorInfo[2],
@@ -130,7 +136,8 @@ class AdminArtistController extends Controller
 
             $artist->units()->detach($unit->id);
 
-            return redirect()->back();
+            return redirect()->back()
+            ->with('status',"Artist {$artist->name} was removed to {$unit->name}.");
         } catch (QueryException $excp) {
             return redirect()->back()->withErrors([
                 'error' => $excp->errorInfo[2],
@@ -159,7 +166,8 @@ class AdminArtistController extends Controller
             $data = $request->except('_token');
             $artist->update($data);
 
-            return redirect()->route('artist-detail', ['id' => $artist->id]);
+            return redirect()->route('artist-list', ['id' => $artist->id])
+                ->with('status', "Artist {$artist->name} was updated.");
         } catch (QueryException $excp) {
             return redirect()->back()->withInput()->withErrors([
                 'error' => $excp->errorInfo[2],
@@ -173,7 +181,8 @@ class AdminArtistController extends Controller
             $artist = Artist::where('id', $id)->firstOrFail();
             $artist->delete();
 
-            return redirect()->route('group-detail', ['id' => $artist->group->id]);
+            return redirect()->route('artist-list', ['id' => $artist->group->id])
+            ->with('status', "Artist {$artist->name} was deleted.");
         } catch (QueryException $excp) {
             return redirect()->back()->withErrors([
                 'error' => $excp->errorInfo[2],

@@ -1,16 +1,10 @@
-@extends('layouts.main-admin')
+@extends('layouts.main')
 
 @section('title',"{$artist->name} - {$artist->group->name}" )
 
 @section('content')
 
-<nav>
-    <a href="{{ route('artist-show-unit',['id' => $artist->id])}}">Show Unit</a>
-    <a href="{{ route('artist-update-form',['id' => $artist->id])}}">Update</a>
-    <a href="{{ route('artist-delete',['id' => $artist->id])}}">Delete</a>
-</nav>
-
-       <img src="{{$artist->photo}}" alt="">
+    <img src="{{$artist->photo}}" alt="">
 
 <table class="list">
     <tr>

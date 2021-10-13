@@ -17,6 +17,11 @@
             <td><input type="text" name="logo" value="{{ old('logo', $unit->logo)}}" required></td>
         </tr>
         <tr>
+            <td><strong>Photo</strong></td>
+            <td><strong>::</strong></td>
+            <td><input type="text" name="photo" id="" value="{{ old('photo', $unit->photo)}}" required></td>
+        </tr>
+        <tr>
             <td><strong>Group</strong></td>
             <td><strong>::</strong></td>
             <td>

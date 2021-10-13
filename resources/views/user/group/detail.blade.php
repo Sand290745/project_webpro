@@ -13,7 +13,7 @@
 <div class="logo-grid">
     @foreach($group->artists as $artist)
     <div>
-        <a class="channel-name" href="{{route('artist-detail',['id' => $artist->id])}}">
+        <a class="channel-name" href="{{route('user-artist-detail',['id' => $artist->id])}}">
             <img class="artist-photo" src="{{$artist->photo}}" alt="">
             <p>{{$artist->name}}</p>
         </a>

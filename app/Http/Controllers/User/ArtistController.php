@@ -8,12 +8,21 @@ use Illuminate\Http\Request;
 
 class ArtistController extends Controller
 {
-    public function list()
+    function list()
     {
         $artists = Artist::orderBy('name');
 
         return view('user.artist.list', [
             'artists' => $artists->get()
+        ]);
+    }
+
+    function detail($id)
+    {
+        $artist = Artist::with('units')->where('id', $id)->firstOrFail();
+
+        return view('user.artist.detail', [
+            'artist' => $artist
         ]);
     }
 }
