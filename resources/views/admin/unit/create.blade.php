@@ -6,7 +6,7 @@
 <form class="form" action="{{ route('unit-create') }}" method="post">
     @csrf
 
-    <table>
+    <table class="group">
         <tr>
             <td><strong>Name</strong></td>
             <td><strong>::</strong></td>
@@ -40,7 +40,7 @@
     </table>
 
     <div class="actions">
-        <button type="submit">Create</button>
+        <input type="submit" value="Create">
     </div>
 
 </form>

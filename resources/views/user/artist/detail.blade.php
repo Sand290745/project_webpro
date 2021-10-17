@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <img src="{{$artist->photo}}" alt="">
+    <img  class="img-box" src="{{$artist->photo}}" alt="">
 
 <table class="list">
     <tr>

@@ -9,11 +9,11 @@
     <a href="{{ route('artist-update-form',['id' => $artist->id])}}">Update</a>
     <a href="{{ route('artist-delete',['id' => $artist->id])}}">Delete</a>
 </nav>
+   
+   <img class="img-box" src="{{$artist->photo}}" alt="">
 
-       <img src="{{$artist->photo}}" alt="">
-
-<table class="list">
-    <tr>
+   <table class="list">
+   <tr>
         <td><strong>Stage Name</strong></td>
         <td><strong>::</strong></td>
         <td>{{$artist->name}}</td>

@@ -3,18 +3,13 @@
 @section('title',$group->name)
 
 @section('content')
-<form id="form" class="form" action="" method="get">
-    <table>
-        <tr>
-            <td> <label for="term">Search</label> </td>
-            <td> <strong class="color">::</strong></td>
-            <td> <input class="search" type="text" name="term" id="term"> </td>
-        </tr>
-    </table>
-
-  <div>
-    <button form="form" type="submit">Search</button>
-  </div>
+<form id="form" class="form" action="" method="get"> 
+    <div class="search-box">
+            <label for="term">Search</label> 
+            <strong class="color">::</strong>
+            <input  type="text" name="term" id="term">
+            <button form="form" type="submit">Search</button>
+    </div>
 
 </form>
 

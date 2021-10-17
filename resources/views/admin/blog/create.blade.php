@@ -6,7 +6,7 @@
 <form class="form" action="{{ route('blog-create') }}" method="post">
     @csrf
 
-    <table>
+    <table class="group">
         <tr>
             <td><strong>Title</strong></td>
             <td><strong>::</strong></td>
@@ -37,9 +37,9 @@
             </td>
         </tr>
     </table>
-
+    
     <div class="actions">
-        <button type="submit">Create</button>
+        <input type="submit" value="Create">
     </div>
 
 </form>

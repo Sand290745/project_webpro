@@ -5,7 +5,7 @@
 @section('content')
 <form class="form" action="{{ route('user-create') }}" method="post">
     @csrf
-<table>
+<table class="group">
     <tr>
         <td><strong>E-mail</strong></td>
         <td><strong class="color">::</strong></td>
@@ -24,9 +24,9 @@
 
 </table>
 
-<div class="actions">
-    <button type="submit">Create</button>
-</div>
+    <div class="actions">
+        <input type="submit" value="Create">
+    </div>
 
 </form>
 @endsection

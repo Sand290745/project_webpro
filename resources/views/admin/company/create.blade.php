@@ -6,7 +6,7 @@
 <form class="form" action="{{ route('company-create') }}" method="post">
     @csrf
 
-    <table>
+    <table class="group">
         <tr>
             <td><strong>logo</strong></td>
             <td><strong>::</strong></td>
@@ -46,7 +46,7 @@
     </table>
 
     <div class="actions">
-        <button type="submit">Create</button>
+        <input type="submit" value="Create">
     </div>
 
 </form>

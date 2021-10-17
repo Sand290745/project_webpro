@@ -7,12 +7,12 @@
 </head>
 
 <body>
+<main class="login">
 <main>
     <header>
         <h1>Login</h1>
     </header>
 
-<main class="login">
     <form action="{{ route('authenticate') }}" method="post">
         @csrf
         <label>

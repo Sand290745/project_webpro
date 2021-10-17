@@ -6,7 +6,7 @@
 <form class="form" action="{{ route('group-create') }}" method="post">
     @csrf
 
-    <table>
+    <table class="group">
         <tr>
             <td><strong>Logo</strong></td>
             <td><strong>::</strong></td>
@@ -38,10 +38,10 @@
                 </select>
             </td>
         </tr>
-    </table>
+        </table>
 
     <div class="actions">
-        <button type="submit">Create</button>
+        <input type="submit" value="Create">
     </div>
 
 </form>
