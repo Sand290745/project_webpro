@@ -4,10 +4,22 @@
 
 @section('content')
 
-<nav>
-<a class="link" href="{{ route('unit-update-form',['id' => $unit->id])}}">Update</a>
-<a class="link" href="{{ route('unit-delete',['id' => $unit->id])}}">Delete</a>
-</nav>
+<div class="action-bar">
+    <a class="link" href="{{ route('unit-update-form',['id' => $unit->id])}}">
+        <button class="action">
+            <img src="https://img.icons8.com/ios/24/000000/approve-and-update.png"/>Update
+        </button>
+    </a>
+
+    <a class="link" href="{{ route('unit-delete',['id' => $unit->id])}}">
+        <button class="action">
+            <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/24/000000/external-delete-miscellaneous-kiranshastry-lineal-kiranshastry.png"/>Delete
+        </button>
+    </a>
+</div>
+
+
+
 <img class="unit-photo" src="{{$unit->photo}}" alt="">
 
 <table class="list">
@@ -23,7 +35,7 @@
     <tr>
         <td>{{$number + 1}}</td>
         <td><a href="{{ route('artist-detail',['id' => $artist->id ])}}">{{$artist->name}}</td>
-        <td>{{$artist->group->company->name}}</td>
+        <td><a href="{{ route('company-detail',['id' => $artist->group->company->id])}}">{{$artist->group->company->name}}</td>
         <td> 
             @foreach($artist->units as $unit)
                 {{$unit->name}}

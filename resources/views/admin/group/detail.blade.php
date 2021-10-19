@@ -3,19 +3,27 @@
 @section('title',$group->name)
 
 @section('content')
-<form id="form" class="form" action="" method="get"> 
-    <div class="search-box">
-            <label for="term">Search</label> 
-            <strong class="color">::</strong>
-            <input  type="text" name="term" id="term">
-            <button form="form" type="submit">Search</button>
-    </div>
 
-</form>
+<div class="action-bar">
+    <a class="link" href="{{ route('artist-create-form')}}">
+        <button class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />New Artist
+        </button>
+    </a>
 
-<a class="link" href="{{ route('artist-create-form')}}">New Artist</a>
-<a href="{{ route('group-update-form',['id' => $group->id])}}">Update</a>
-<a href="{{ route('group-delete',['id' => $group->id])}}">Delete</a>
+    <a href="{{ route('group-update-form',['id' => $group->id])}}">
+        <button class="action">
+            <img src="https://img.icons8.com/ios/24/000000/approve-and-update.png"/>Update
+        </button>
+    </a>
+
+    <a href="{{ route('group-delete',['id' => $group->id])}}">
+        <button class="action">
+            <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/24/000000/external-delete-miscellaneous-kiranshastry-lineal-kiranshastry.png"/>Delete
+        </button>
+    </a>
+</div>
+
 
 <table class="list">
     <tr>

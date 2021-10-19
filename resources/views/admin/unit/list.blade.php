@@ -4,9 +4,15 @@
 
 @section('content')
 
-<nav>
-    <a class="link" href="{{ route('unit-create-form')}}">New Unit</a>
-</nav>
+<div class="action-bar">
+    <a class="link" href="{{ route('unit-create-form')}}">
+        <button class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />New Unit
+        </button>
+    </a>
+</div>
+    
+
 
 <table class="list">
     <tr>

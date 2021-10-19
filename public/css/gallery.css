@@ -1,0 +1,16 @@
+.video-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 36px;
+    place-items: center;
+}
+
+.video {
+    border: 1px solid #ccc;
+    font-size: large;
+    font-weight: bold;
+}
+
+.video:hover {
+    border: 1px solid #777;
+}

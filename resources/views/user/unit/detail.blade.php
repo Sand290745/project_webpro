@@ -4,12 +4,6 @@
 
 @section('content')
 
-<div>
-    @foreach($unit->group->units as $unit)
-    <a href="{{route('user-unit-detail',['id' => $unit->id])}}">{{$unit->name}}</a>
-    @endforeach
-</div>
-
 <div class="logo-grid">
     @foreach($artists as $artist)
     <div>
@@ -21,11 +15,13 @@
     @endforeach
 </div>
 
-<div>
+<h1>Music</h1>
+<div class="video-container">
     @foreach($music as $m)
-    <h1>{{$m->name}}</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{$m->link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+    <div class="video">
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/{{$m->link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a class="m-name" href="https://www.youtube.com/watch?v={{$m->link}}"><p>{{$m->name}}</p></a>
+    </div>
     @endforeach
 </div>
 

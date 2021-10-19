@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Route;
 
 
 /* ************** AdminGroup ************** */
+Route::redirect('/admin','/admin/group');
 
 Route::get('/admin/group/create', [AdminGroupController::class, 'createForm'])->name('group-create-form');
 Route::post('/admin/group/create', [AdminGroupController::class, 'create'])->name('group-create');
@@ -105,7 +106,7 @@ Route::get('/admin/user/{email}/delete',[AdminUserController::class,'delete'])->
 
 /* ************** Home ************** */
 Route::get('/home', [HomeController::class, 'home'])->name('home');
-Route::get('/', [HomeController::class, 'home']);
+Route::redirect('/', '/home');
 
 /* ************** Unit ************** */
 Route::get('/unit/{id}', [UnitController::class, 'detail'])->name('user-unit-detail');

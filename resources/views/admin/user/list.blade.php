@@ -1,12 +1,17 @@
 @extends('layouts.main-admin')
 
-@section('title','User : List')
+@section('title','User List')
 
 @section('content')
+<div class="action-bar">
+    <a  href="{{ route('user-create-form')}}">
+        <button  class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />New User
+        </button>
+    </a>
+</div>
+    
 
-<nav>
-    <a  href="{{ route('user-create-form')}}">New User</a>
-</nav>
     
 
 <table class="list">

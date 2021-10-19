@@ -4,7 +4,14 @@
 
 @section('content')
 
-<a class="link" href="{{ route('company-create-form')}}">New Company</a>
+<div class="action-bar">
+    <a class="link" href="{{ route('company-create-form')}}">
+        <button class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />New Company
+        </button>
+    </a>
+</div>
+
 
 
 <table class="list">

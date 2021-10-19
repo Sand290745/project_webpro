@@ -9,27 +9,23 @@
     <table class="group">
         <tr>
             <td><strong>Logo</strong></td>
-            <td><strong>::</strong></td>
             <td><input type="text" name="logo" id="" value="{{ old('logo')}}" required></td>
         </tr>
         <tr>
             <td><strong>Group Name</strong></td>
-            <td><strong>::</strong></td>
             <td><input type="text" name="name" id="" value="{{ old('name')}}" required></td>
         </tr>
-        
+
         <tr>
             <td><strong>fandom</strong></td>
-            <td><strong>::</strong></td>
             <td><input type="text" name="fandom" value="{{ old('fandom')}}" required></td>
         </tr>
 
         <tr>
             <td><strong>Company</strong></td>
-            <td><strong>::</strong></td>
             <td>
                 <select name="company_id" required>
-                    <option value="">-- Please select company --</option>
+                    <option value="">Please select company</option>
                     @foreach($companies as $company)
                     <option value="{{ $company->id }}" {{ ($company->id === old('company'))? 'selected' : '' }}>
                         {{ $company->name }}
@@ -38,11 +34,10 @@
                 </select>
             </td>
         </tr>
-        </table>
+    </table>
 
-    <div class="actions">
-        <input type="submit" value="Create">
-    </div>
+    <button class="submit" type="submit">Create</button>
+
 
 </form>
 @endsection

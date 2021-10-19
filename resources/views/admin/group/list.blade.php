@@ -4,7 +4,13 @@
 
 @section('content')
 
-<a class="link" href="{{ route('group-create-form')}}">New Group</a>
+<div class="action-bar">
+    <a href="{{ route('group-create-form')}}">
+        <button class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />New Group
+        </button>
+    </a>
+</div>
 
 
 <table class="list">

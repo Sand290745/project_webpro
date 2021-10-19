@@ -4,11 +4,17 @@
 
 @section('content')
 
-<a href="{{ route('artist-detail',['id' => $artist->id])}}"><strong> &lt; Back</strong></a>
+    <a class="back" href="{{ route('artist-detail',['id' => $artist->id])}}"><strong> &lt; Back</strong></a>
 
-<nav>
-    <a class="link" href="{{ route('artist-add-unit-form',['id' => $artist->id]) }}">Add Units </a> 
-</nav>
+
+<div class="action-bar">
+    <a class="link" href="{{ route('artist-add-unit-form',['id' => $artist->id]) }}">
+        <button class="action">
+            <img src="https://img.icons8.com/material-outlined/24/000000/add.png" />Add Units
+        </button>
+    </a> 
+</div>
+    
 
 <table class="list">
     <tr>

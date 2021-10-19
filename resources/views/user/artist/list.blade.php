@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','Channels')
+@section('title','Artists')
 
 @section('content')
 
