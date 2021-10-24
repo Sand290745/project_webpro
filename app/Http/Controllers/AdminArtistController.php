@@ -119,7 +119,7 @@ class AdminArtistController extends Controller
 
             $artist->units()->attach($unit->id);
 
-            return redirect()->route('artist-show-unit', ['id' => $artist->id])
+            return redirect()->route('artist-detail', ['id' => $artist->id])
             ->with('status',"Artist {$artist->name} was added to unit {$unit->name}.");
         } catch (QueryException $excp) {
             return redirect()->back()->withInput()->withErrors([

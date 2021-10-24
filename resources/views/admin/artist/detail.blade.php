@@ -5,6 +5,12 @@
 @section('content')
 
 <div class="action-bar">
+
+    <div class="container">
+        <a class="back" href="{{ route('artist-list',['id' => $artist->id])}}"><strong> &lt; Back</strong></a>
+    </div>
+   
+
     <a href="{{ route('artist-show-unit',['id' => $artist->id])}}">
         <button class="action"> 
             <img src="https://img.icons8.com/ios/24/000000/show-property.png"/>Show Unit 
@@ -78,7 +84,7 @@
     <tr>
         <td><strong>Instagram</strong></td>
         <td> 
-            <div class="ig-box">
+            <div class="ig-box-admin">
                 <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png" /><a href="https://www.instagram.com/{{$artist->instagram}}">{{$artist->instagram}} </a></td>
             </div>
     </tr>    

@@ -18,6 +18,10 @@
         <td><strong>Password</strong></td>
         <td><input type="password" name="password" value="{{ old('password', $user->password)}}"></td>
     </tr>
+    <tr>
+        <td><strong>Photo</strong></td>
+        <td><input type="text" name="photo" id="" value="{{ old('photo', $user->photo)}}" required></td>
+    </tr>
 </table>
 
 <div>

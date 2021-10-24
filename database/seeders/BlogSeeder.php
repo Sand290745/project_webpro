@@ -15,22 +15,22 @@ class BlogSeeder extends Seeder
     public function run()
     {
        Blog::create([
-         'title'=>'NCT 127 The 3rd Album "Sticker" ',
-         'photo'=>'https://cf.shopee.co.th/file/64b19c6b12501c1a7fbd1b23a37eb02e',
+         'title'=>'History of K-Pop: EXO',
+         'photo'=>'https://images.squarespace-cdn.com/content/v1/56eb012f27d4bd29de975fae/1574618788034-OEMI3N2UYN0PURZITB2D/HIST_EXO_HEADER.jpg?format=500w',
          'user_id'=>1,
-         'group_id'=>2,
+         'group_id'=>1,
        ]);
 
        Blog::create([
-        'title'=>'NCT DREAM Hello Future - The 1st Album Repackages" ',
-        'photo' => 'https://my-live-05.slatic.net/p/7b3707a08ee916d0c7566495ff7fbb9a.jpg_2200x2200q80.jpg_.webp',
+        'title'=>'D.O. Makes Highly Anticipated Debut with 공감 (Empathy)',
+        'photo' => 'https://images.squarespace-cdn.com/content/v1/56eb012f27d4bd29de975fae/1627435152092-IS9GEHT45QDW7W2APJTH/DB_DO_Header.jpg?format=500w',
         'user_id'=>1,
-        'group_id'=>2,
+        'group_id'=>1,
       ]);
 
       Blog::create([
-        'title'=>'NCT 2020 - Album NCT 2020 : RESONANCE',
-        'photo'=>'https://pbs.twimg.com/media/EnhCbbTUYAEcAf6?format=jpg&name=4096x4096',
+        'title'=>'Rosé Makes Her Solo Debut With R.',
+        'photo'=>'https://nomnom-korea.com/wp-content/uploads/2021/03/blackpink0313-1024x570.png',
         'user_id'=>1,
         'group_id'=>2,
       ]);

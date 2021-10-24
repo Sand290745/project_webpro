@@ -13,6 +13,8 @@ use App\Http\Controllers\User\GroupController;
 use App\Http\Controllers\User\ArtistController;
 use App\Http\Controllers\User\UnitController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\User\DetailController;
+use App\Http\Controllers\User\HistoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -125,3 +127,6 @@ Route::get('/auth/login', [LoginController::class, 'loginForm'])->name('login');
 Route::post('/auth/login', [LoginController::class, 'authenticate'])->name('authenticate');
 Route::get('/auth/logout', [LoginController::class, 'logout'])->name('logout');
 
+
+/* *********** History *********** */
+Route::get('/history', [HistoryController::class, 'detail'])->name('user-history-detail');

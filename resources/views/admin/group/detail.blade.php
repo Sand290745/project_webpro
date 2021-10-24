@@ -39,11 +39,11 @@
     <tr>
         <td>{{$number + 1}}</td>
         <td><a href="{{ route('artist-detail',['id' => $artist->id ])}}">{{$artist->name}}</td>
-        <td>{{$artist->group->company->name}}</td>
+        <td><a href="{{ route('company-detail',['id' => $artist->group->company->id])}}">{{$artist->group->company->name}}</td>
         @if($group->units->isNotEmpty())
         <td> 
             @foreach($artist->units as $unit)
-                {{$unit->name}}
+                <a href="{{ route('unit-detail',['id' => $unit->id ])}}">{{$unit->name}}</a>
             @endforeach
         </td>
         @endif

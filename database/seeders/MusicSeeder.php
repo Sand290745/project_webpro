@@ -22,63 +22,63 @@ class MusicSeeder extends Seeder
         ]);
 
         Music::create([
-            'name'=>'NCT U - 90s Love MV',
+            'name'=>'90s Love MV',
             'link'=>'A5H8zBb3iao',
             'group_id'=>2,
             'unit_id'=>3,
         ]);
 
         Music::create([
-            'name'=>'NCT U - Work It',
+            'name'=>'Work It',
             'link'=>'Un7choIyl_g',
             'group_id'=>2,
             'unit_id'=>3,
         ]);
 
         Music::create([
-            'name'=>'NCT 2020 - RESONANCE',
+            'name'=>'RESONANCE',
             'link'=>'0IpbvXVbBYA',
             'group_id'=>2,
             'unit_id'=>3,
         ]);
 
         Music::create([
-            'name'=>'NCT 127 - Lemonade',
+            'name'=>'Lemonade',
             'link'=>'MmUNXU77waQ',
             'group_id'=>2,
             'unit_id'=>1,
         ]);
 
         Music::create([
-            'name'=>'NCT 127 - Sticker',
+            'name'=>'Sticker',
             'link'=>'1oYWnbTSang',
             'group_id'=>2,
             'unit_id'=>1,
         ]);
 
         Music::create([
-            'name'=>'NCT 127 - Highway to Heaven',
+            'name'=>'Highway to Heaven',
             'link'=>'iFoqGyWhMws',
             'group_id'=>2,
             'unit_id'=>1,
         ]);
 
         Music::create([
-            'name'=>'NCT DREAM - Life Is Still Going On',
+            'name'=>'Life Is Still Going On',
             'link'=>'aq2epFJ4fR4',
             'group_id'=>2,
             'unit_id'=>2,
         ]);
 
         Music::create([
-            'name'=>'NCT DREAM - Hello Future',
+            'name'=>'Hello Future',
             'link'=>'QPUjV7epJqE',
             'group_id'=>2,
             'unit_id'=>2,
         ]);
 
         Music::create([
-            'name'=>'NCT DREAM - Ridin',
+            'name'=>'Ridin',
             'link'=>'vofjeJvRT9c',
             'group_id'=>2,
             'unit_id'=>2,
@@ -86,42 +86,42 @@ class MusicSeeder extends Seeder
 
 
         Music::create([
-            'name'=>'WayV - Kick Back',
+            'name'=>'Kick Back',
             'link'=>'5h3sIRrQHJE',
             'group_id'=>2,
             'unit_id'=>4,
         ]);
         
         Music::create([
-            'name'=>'WayV - Take Off',
+            'name'=>'Take Off',
             'link'=>'irXZve4QRos',
             'group_id'=>2,
             'unit_id'=>4,
         ]);
 
         Music::create([
-            'name'=>'WayV - Turn Back Time',
+            'name'=>'Turn Back Time',
             'link'=>'eUCVRF6hjSQ',
             'group_id'=>2,
             'unit_id'=>4,
         ]);
 
         Music::create([
-            'name'=>'TREASURE - I LOVE YOU',
+            'name'=>'I LOVE YOU',
             'link'=>'_hFarg-Obuc',
             'group_id'=>3,
             'unit_id'=>8,
         ]);
 
         Music::create([
-            'name'=>'TREASURE - BEAUTIFUL',
+            'name'=>'BEAUTIFUL',
             'link'=>'UKXeico0yeI',
             'group_id'=>3,
             'unit_id'=>8,
         ]);
 
         Music::create([
-            'name'=>'TREASURE - Going Crazy',
+            'name'=>'Going Crazy',
             'link'=>'u01r0O5WsEo',
             'group_id'=>3,
             'unit_id'=>8,
@@ -129,42 +129,42 @@ class MusicSeeder extends Seeder
 
 
         Music::create([
-            'name'=>'EXO - Paradise',
+            'name'=>'Paradise',
             'link'=>'YFrjy7uAS48',
             'group_id'=>1,
             'unit_id'=>5,
         ]);
 
         Music::create([
-            'name'=>'EXO - Peter Pan',
+            'name'=>'Peter Pan',
             'link'=>'Svmb3MvlNoM',
             'group_id'=>1,
             'unit_id'=>5,
         ]);
         
         Music::create([
-            'name'=>'EXO-CBX - Hey Mama',
+            'name'=>'Hey Mama',
             'link'=>'AOzVyVv1HtQ',
             'group_id'=>1,
             'unit_id'=>6,
         ]);
 
         Music::create([
-            'name'=>'EXO-CBX - Ka-CHING!',
+            'name'=>'Ka-CHING!',
             'link'=>'XNwYapPXNkw',
             'group_id'=>1,
             'unit_id'=>6,
         ]);
 
         Music::create([
-            'name'=>'EXO-SC - Closer to you',
+            'name'=>'Closer to you',
             'link'=>'GjO4inIuPZo',
             'group_id'=>1,
             'unit_id'=>7,
         ]);
 
         Music::create([
-            'name'=>'EXO-SC - Telephone',
+            'name'=>'Telephone',
             'link'=>'5Lw38CVAVxw',
             'group_id'=>1,
             'unit_id'=>7,

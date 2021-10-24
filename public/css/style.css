@@ -102,6 +102,10 @@ a {
     text-align: center;
 }
 
+.channel-item {
+    width: 250px !important;
+}
+
 .channel-logo {
     width: 200px;
     height: 200px;
@@ -120,7 +124,7 @@ a {
 main {
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .logo-grid {
@@ -131,7 +135,7 @@ main {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     margin-top: 24px;
 }
 
@@ -147,21 +151,16 @@ main {
     opacity: 0.5;
 }
 
-/* table.company-list,
-table.company-list tr,
-table.company-list td,
-table.company-list th {
-    border: 1px solid gray;
-    border-collapse: collapse;
-} */
-
 .blog-cover {
     width: 100%;
 }
 
 .blog-item {
-    width: 200px !important;
-    box-shadow: 10px 10px grey;
+    width: 350px !important;
+}
+
+.blog-item img {
+    width: 350px;
 }
 
 .name {
@@ -305,7 +304,7 @@ button.action img {
     margin-bottom: 16px;
 }
 
-.ig-box {
+.ig-box-admin {
     display: flex;
     align-items: center;
     padding-left: 370px;
@@ -332,8 +331,36 @@ button.action img {
 }
 
 .back {
+    float:left;
+    width:100px;
     font-family: Sora;
     color: black;
     font-size: 16px;
-    padding: 70px 0;
+}
+
+.container {
+    width:50%;
+}
+
+.h {
+    display: block;
+    text-align: left;
+    text-indent: 30px;
+}
+
+.home-banner {
+    display: flex;
+    text-align: left;
+}
+
+.home-banner img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.home-banner button {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px 16px;
 }

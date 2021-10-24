@@ -46,7 +46,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
         Welcome to website k-pop!
     </footer>
 </body>

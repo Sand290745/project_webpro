@@ -38,7 +38,7 @@
         <td><a href="{{ route('company-detail',['id' => $artist->group->company->id])}}">{{$artist->group->company->name}}</td>
         <td> 
             @foreach($artist->units as $unit)
-                {{$unit->name}}
+            <a href="{{ route('unit-detail',['id' => $unit->id ])}}">{{$unit->name}}
             @endforeach
         </td>
         <td> {{$artist->group->fandom}} </td>

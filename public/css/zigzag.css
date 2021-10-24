@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+  
+.row{
+    display: table;
+    clear: both
+}
+  
+.column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 5px;
+}
+  
+.column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+}
+  
+.large-font {
+    font-size: 48px;
+    color: #6366F1;
+}
+  
+.xlarge-font {
+    font-size: 64px
+}
+  
+.button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.button:hover {
+    background-color:#1F2937;
+    color: white;
+    opacity: 0.5;
+}
+  
+.z {
+    height: auto;
+    margin: auto;
+}
