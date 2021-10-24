@@ -16,7 +16,7 @@
         @endforeach
     </div>
 
-    <h1>Music</h1>
+    <h1>Video</h1>
     <div class="video-container">
         @foreach($group->music as $music)
         <div class="video">
@@ -26,4 +26,17 @@
         @endforeach
     </div>
 
+
+    <h2 class="blog-home">NEWS</h2>
+    <div class="blog-grid">
+        @foreach($group->blogs as $blog)
+        <div class="blog-item">
+            <a class="channel-name" href="{{route('user-blog-detail',['id' => $blog->id])}}">
+                <img class="channel-logo" src="{{$blog->photo}}" alt="">
+                <p class="blog-title">{{$blog->title}}</p>
+                <p class="name">{{$blog->group->name}}</p>
+            </a>
+        </div>
+        @endforeach
+    </div>
 @endsection

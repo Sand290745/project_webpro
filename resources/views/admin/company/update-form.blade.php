@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td><strong>Description</strong></td>
-            <td><input type="text" name="description" value="{{ old('description', $company->description)}}" required></td>
+            <td><textarea name="description" required>{{ old('description', $company->description)}} </textarea></td>
         </tr>
         
     </table>

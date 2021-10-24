@@ -15,7 +15,8 @@
     @endforeach
 </div>
 
-<h1>Music</h1>
+
+<h1>Video</h1>
 <div class="video-container">
     @foreach($music as $m)
     <div class="video">

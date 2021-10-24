@@ -108,7 +108,8 @@ class AdminUnitController extends Controller
 
             $artist->units()->detach($unit->id);
 
-            return redirect()->back();
+            return redirect()->back()
+            ->with('status', "Artist {$artist->name} was removed to {$unit->name}.");
         }catch (QueryException $excp) {
             return redirect()->back()->withErrors([
                 'error' => $excp->errorInfo[2],
