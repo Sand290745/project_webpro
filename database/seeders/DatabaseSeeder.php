@@ -18,17 +18,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            UserSeeder::class,
-            CompanySeeder::class,
-            GroupSeeder::class,
-            UnitSeeder::class,
-            ArtistSeeder::class,
-            MusicSeeder::class,
-            BlogSeeder::class,
-            UnitHasArtistSeeder::class,
-            TrixSeeder::class,
-        ]);
     
+        $this->call(ArtistsTableSeeder::class);
+        $this->call(BlogsTableSeeder::class);
+        $this->call(CompaniesTableSeeder::class);
+        $this->call(GroupsTableSeeder::class);
+        $this->call(MigrationsTableSeeder::class);
+        $this->call(MusicTableSeeder::class);
+        $this->call(TrixAttachmentsTableSeeder::class);
+        $this->call(TrixRichTextsTableSeeder::class);
+        $this->call(UnitsTableSeeder::class);
+        $this->call(UnitsHasArtistsTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
     }
 }
